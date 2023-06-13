@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
 @font-face {
     font-family : 'IBM Plex Sans';
     font-style : normal;
@@ -11,4 +24,386 @@
     font-display : swap;
     src : url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdzeFb5N.woff2) format('woff2');
     unicode-range : U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+:root{
+    --width: 1296px;
+    --color-text: #161823;
+    /* FONT FAMILY */
+    --font-IBM: "IBM Plex Sans";
+}
+
+body {
+    background: #ffffff;
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+}
+
+body a {
+    color: rgb(22, 24, 35);
+    transition: color 250ms ease 0s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container{
+    width: var(--width);
+    margin: 0 auto;
+}
+
+header{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px ;
+    padding: 8px 0;
+}
+
+.header-fixed{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    height: 60px;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    position: fixed;
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    app-region: drag;
+    overflow: hidden;
+}
+
+.header-menu {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 24px;
+    padding-left: 20px;
+}
+
+.header-left .logo {
+    max-width: 118px;
+    max-height: 42px;
+}
+
+.header-main{
+    width: 560px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 21px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    height: 46px;
+}
+
+.header-main input {
+   
+    width: 100%;
+    padding: 12px 53px 12px 16px;
+   
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.header-main input ::placeholder{
+    color: var(--color-text);
+    font-family: "ProximaNova, PingFangSC, sans-serif";
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header-main input:focus{
+
+}
+.header-main .iconl {
+    padding: 11px 16px 11px 12px;
+    font-size: 14px;
+    line-height: 21px;
+    width: 52px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-main button {
+    padding: 11px 32px 11px 12px;
+    margin: -12px -16px -12px 0px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #C6C6C9;
+ 
+    font-size: 22px;
+}
+.header-right{
+    display: flex;
+}
+.header-right ul{
+    display: flex;
+    align-items: center;
+}
+
+.header-right ul li a{
+    display: block;
+    margin-left: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-right a.avatar {
+   
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background: center center / cover no-repeat;
+    background-image: url("https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/40fd3238f7bc547c537482433dff10a8~c5_720x720.jpeg?x-expires=1686798000&x-signature=rIaoA6GsgYTMxZeesfKCp4vrU1U%3D");
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-right a.plus{
+    
+    padding: 8px 24px;
+  
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 16px;
+    margin-left: unset;
+}
+
+.header-right a.plus:visited{
+    color: rgb(22, 24, 35)
+}
+
+.header-right a.plus span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+}
+
+.header-right span.message {
+    position: relative;
+    display: flex;
+    align-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.header-right span.message .count-message{
+    color: rgb(255, 255, 255);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    left: 16px;
+    position: absolute;
+    top: -7px;
+    min-width: 20px;
+    border-radius: 10px;
+    height: 20px;
+    background: rgb(254, 44, 85);
+    text-align: center;
+    padding: 0px;
+}
+
+.header-right span.inbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-right a.plus span {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* MAIN */
+
+main {
+    margin-top: 76px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.ladi-section{
+
+}
+
+.ladi-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ladi-box .ladi-title h1 {
+    font-size: 24px;
+    color: var(--color-text);
+}
+
+.ladi-box .ladi-history {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.ladi-information{
+    margin: 20px 0;
+}
+
+.ladi-information .ladi-bg {
+    display: flex;
+    align-items: center;
+    background: #F9F9F9;
+    max-width: 100%;
+    min-width: 255px;
+    width: max-content;
+    height: 76px;
+    padding: 16px 20px;
+    display: flex;
+    opacity: 0.8;
+    -webkit-box-pack: start;
+    place-content: center flex-start;
+    background: rgba(22, 24, 35, 0.03);
+    border-radius: 4px;
+}
+
+.ladi-information .ladi-avatar{
+    width:44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ladi-information .ladi-content{
+    margin-left: 12px;
+}
+
+.ladi-information .ladi-content .ladi-coin, .ladi-information .ladi-content .ladi-coin span{
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.ladi-information .ladi-content .ladi-coin span{
+    margin-left: 4px;
+    color: var(--color-text);
+    opacity: 50%;
+}
+
+.ladi-information .ladi-content__name {
+    font-weight: 700;
+    color: rgb(22, 24, 35);
+    font-size: 18px;
+}
+
+.ladi-buy .ladi-title{
+    position: relative;
+    /* font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif; */
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 32px;
+    line-height: 1.2;
+    color: rgb(22, 24, 35);
+}
+
+.ladi-buy .ladi-title .title-color{
+    position: relative;
+    color: #fe2c55;
+    font-size: 18px;
+}
+
+.ladi-buy .ladi-title .title-color::after{
+    content: "i";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #BCBCBF;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -21px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #BCBCBF;
+}
+
+.ladi-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 24px 0;
+    gap: 32px 94px;
+}
+
+.ladi-item {
+    border: 2px solid #BCBCBF;
+    width: 100%;
+    min-height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 18px 2px 16px 2px;
+    cursor: pointer;
+}
+
+.ladi-item:focus{
+    border: 3px solid rgb(250, 206, 21);
+}
+.ladi-item.active{
+    border: 3px solid rgb(250, 206, 21);
+}
+
+.ladi-item .ladi-coin {
+    display: flex;
+    align-items: center; 
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ladi-item svg {
+    width: 34px;
+    height: 34px;
+}
+
+.ladi-item .ladi-coin span{
+    margin-left: 10px;
+}
+
+.ladi-item .ladi-price{
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(22, 24, 35, 0.5);
+    text-align: center;
+    line-height: 1.1;
 }
