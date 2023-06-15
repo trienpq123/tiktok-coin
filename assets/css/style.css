@@ -543,6 +543,9 @@ main {
 
 .ladi-information{
     margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ladi-information .ladi-bg {
@@ -576,7 +579,14 @@ main {
 .ladi-information .ladi-content .ladi-coin, .ladi-information .ladi-content .ladi-coin span{
     display: flex;
     align-items: center;
-    width: 44px;
+    width: 20px;
+    margin-right: 4px;
+}
+
+.ladi-your-coin {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
 }
 .ladi-information .ladi-content .ladi-coin span{
     margin-left: 4px;
@@ -697,16 +707,17 @@ main {
 }
 .ladi-item input[type="number"],
 .ladi-item__custom input[type="number"]
- {
-    -webkit-appearance: textfield;
+{
+    /* -webkit-appearance: textfield;
     -moz-appearance: textfield;
-    appearance: textfield;
+    appearance: textfield; */
 }
 
 .ladi-item input[type=number]::-webkit-inner-spin-button,
 .ladi-item__custom input[type=number]::-webkit-inner-spin-button,
 .ladi-item__custom input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none;
+appearance: none;
 }
 
 .ladi-payment{
@@ -1132,4 +1143,20 @@ main {
     padding: 24px;
     font-size: 20px;
     cursor: pointer;
+}
+
+.search-user input{
+    padding: 8px;
+    width: 230px;
+    border-radius: 4px;
+    color:#161823;
+    font-weight: 700;
+    border: 2px solid #0f0f0f;
+}
+
+.search-user input[type=text]:focus{
+    border: 2px solid red;
+}
+.search-user input[type=text]::placeholder{
+    color: rgba(149, 157, 165)
 }
