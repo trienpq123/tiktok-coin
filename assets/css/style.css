@@ -848,7 +848,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
-.process-title{
+.process-title,.summary-title{
     font-size: 24px;
     line-height: 32px;
     color: rgb(22, 24, 35);
@@ -862,7 +862,9 @@ input[type=number]::-webkit-outer-spin-button {
     /* margin-bottom: 24px; */
 }
 
-.process{
+
+
+.process,.summary,.paypal{
     position: fixed;
     left: 0;
     right: 0;
@@ -874,11 +876,18 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
 }
 
-.process.active{
+.paypal{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.process.active,.summary.active{
     display: block;
 }
 
-.box-process {
+.box-process{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -897,6 +906,224 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 24px;
 }
 
+.box-paypal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    /* max-width: 880px; */
+    max-width: 742px;
+    padding: 24px 24px;
+    border-radius: 4px;
+    overflow: auto;
+    margin-bottom: 24px;
+    min-height: 429px;
+}
+
 .process-sub{
     margin-bottom: 24px;
+}
+
+.paypal-check{
+    width: 52px;
+    height:52px;
+    background:#f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.paypal-check span{
+    font-size: 20px;
+    color: #2cc13f;
+}
+
+.summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+.box-summary{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    /* max-width: 880px; */
+    max-width: 742px;
+    padding: 24px 18px;
+    border-radius: 4px;
+    overflow: auto;
+    margin-bottom: 24px;
+}
+
+.summary .summary-close{
+    position: absolute;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    padding: 16px 24px;
+    cursor: pointer;
+}
+
+.box-summary hr {
+    width: 100%;
+    border: 0.5px solid rgba(22, 24, 35, 0.2);
+    opacity: .1;
+    margin-bottom: 24px;
+}
+
+.summary-detail{
+    width: 100%;
+}
+
+.summary-detail .summary-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    color:#161823;
+    margin-bottom: 24px;
+}
+
+
+.summary-method{
+    margin-bottom: 24px;
+    font-family: "IBM Plex Sans";
+}
+
+.summary-method__label{
+    color:rgba(22, 24, 35, 0.5);
+    font-weight: 700;
+}
+
+.summary-method .method{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-method .summary-detail-val input[type="radio"] {
+        accent-color:#fe2c55; 
+        width:20px;
+        height:20px;
+}
+
+.summary-method .summary-detail-title{
+    font-family: "IBM Plex Sans";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 700;
+}
+
+.summary-method .summary-detail-title span.hidden{
+    color:#161823;
+    font-weight: 100;
+    margin-left: 12px;
+}
+
+.summary .method{
+    margin-top:8px;
+    margin-bottom: 48px;
+}
+
+.summary-price{
+    margin-bottom: 8px !important;
+}
+
+.summary-price .submmary-box__label{
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 500;
+    font-family: IBM Plex Sans;
+}
+
+.summary-total {
+    color:#161823;
+    font-weight: 700;
+}
+
+.summary-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 4px 8px;
+
+}
+
+.summary-submit .desc{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: IBM Plex Sans;
+    margin: 8px 16px 8px 8px;
+}
+
+
+
+.summary-btn{
+    margin-top:unset;
+    flex:1;
+    font-weight: 700;
+    /* font-size: 24px; */
+}
+
+.summary-coin{
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+}
+
+.paypal.active{
+    display: block;
+}
+
+.paypal{
+    display: none;
+}
+
+.paypal-title{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'ProximaNova';
+    margin-bottom: 24px;
+}
+
+.paypal-detail {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+}
+
+.paypal-close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    font-size: 20px;
+    cursor: pointer;
 }
