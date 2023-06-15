@@ -630,7 +630,7 @@ main {
     gap: 32px 96px;
 }
 
-.ladi-item {
+.ladi-item, .ladi-item__custom {
     border: 1px solid rgba(22, 24, 35, 0.12);
     width: 100%;
     min-height: 96px;
@@ -643,14 +643,14 @@ main {
     cursor: pointer;
 }
 
-.ladi-item:focus{
+.ladi-item:focus,.ladi-item__custom:focus{
     border: 3px solid rgb(250, 206, 21);
 }
-.ladi-item.active{
+.ladi-item.active,.ladi-item__custom.active{
     border: 3px solid rgb(250, 206, 21);
 }
 
-.ladi-item .ladi-coin {
+.ladi-item .ladi-coin, .ladi-item__custom .ladi-coin {
     display: flex;
     align-items: center; 
     font-size: 24px;
@@ -658,16 +658,18 @@ main {
     margin-bottom: 10px;
 }
 
-.ladi-item svg {
+.ladi-item svg, .ladi-item__custom svg {
     width: 34px;
     height: 34px;
 }
 
-.ladi-item .ladi-coin span{
+.ladi-item .ladi-coin span, 
+.ladi-item__custom .ladi-coin span{
     margin-left: 10px;
 }
 
-.ladi-item .ladi-price{
+.ladi-item .ladi-price,
+.ladi-item__custom .ladi-price{
     font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -676,7 +678,8 @@ main {
     line-height: 1.1;
 }
 
-.ladi-item input {
+.ladi-item input,
+.ladi-item__custom input {
     width: 134px;
     background-color: transparent;
     border-top: none;
@@ -692,14 +695,17 @@ main {
     font-size: 24px;
     line-height: 32px;
 }
-.ladi-item input[type="number"] {
+.ladi-item input[type="number"],
+.ladi-item__custom input[type="number"]
+ {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
 }
 
-.ladi-item input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+.ladi-item input[type=number]::-webkit-inner-spin-button,
+.ladi-item__custom input[type=number]::-webkit-inner-spin-button,
+.ladi-item__custom input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none;
 }
 
