@@ -218,7 +218,7 @@
                         </div>
                     </div>
 
-                    <button class="btn-submit">
+                    <button class="btn-submit" disabled>
                         Submit
                     </button>
                     <div class="process">
@@ -340,6 +340,9 @@
         $('.paypal-close').click(function(){
             $('.paypal').removeClass('active')
         })
+        $('.summary-close').click(function(){
+            $('.summary').removeClass('active')
+        })
      $('.custom').click(function(){
        if(!$(this).hasClass('active')){
            let input = `
@@ -397,10 +400,16 @@
                 });
                 let total = '€ '+ USDollar.format(price * 1.14); 
                 $('.ladi-total .total .total-price').html(total);
-                $('.summary-detail-title.coins').html(price)
+                $('.summary-detail-title.coins').html(price + ' Coins')
                 $('.paypal-detail .coin').html(price)
                 $('.summary-detail-val.summary-coin').html(total)
-                $('.summary-total').html(total)
+                $('.summary-total').html()
+            if($(this).val()){
+                console.log($(this).length)
+                $('.btn-submit').removeAttr('disabled')
+            }else{
+                 $('.btn-submit').attr('disabled','disabled')
+            }
         });
     
      
